@@ -146,6 +146,16 @@ DSE4101-CryptoWhale-2/
 ├── requirements.txt # Python dependencies list
 └── README.md # Project documentation
 ```
+## Data Transformation Summary
+
+| Notebook | Input | Output | Description |
+|-----------|--------|---------|-------------|
+| whale_alerts_btc.ipynb | Whale Alert data| /Data/whale_btc_clean.csv | Cleans BTC whale transaction data |
+| whale_alerts_eth.ipynb | Whale Alert data| /Data/whale_eth_clean.csv | Cleans ETH whale transaction data |
+| dune_btc.ipynb | Dune BTC queries | /Data/dune_btc_hourly.csv | Fetches BTC on-chain metrics |
+| dune_eth.ipynb | Dune ETH queries | /Data/dune_eth_hourly.csv | Fetches ETH on-chain metrics |
+| final_df_var_fevd.ipynb | BTC & ETH volatility | /Data/final_df_var_fevd.csv | Creates VAR–FEVD spillover features |
+| feature_engineering.ipynb | All merged datasets | /Data/final_dataset.csv | Final modeling dataset |
 
 ## Recommended Execution Order
 
