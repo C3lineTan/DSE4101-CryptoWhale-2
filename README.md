@@ -111,7 +111,8 @@ DSE4101-CryptoWhale-2/
 │ ├── Backtesting_BTC.ipynb 
 │ ├── DM Test_BTC.ipynb 
 │ ├── EGARCH_BTC.ipynb
-│ ├── LSTM_BTC.ipynb
+│ ├── LSTM_BTC.ipynb # Lookback set at 0
+│ ├── LSTM_seq.ipynb # With temporal dependence tuning
 │ ├── XGBoost_BTC.ipynb
 │ └── Transformer/ # (Vanilla, Dense, Random Synthesizer)
 │
@@ -119,7 +120,8 @@ DSE4101-CryptoWhale-2/
 │ ├── Backtesting_ETH.ipynb
 │ ├── DM Test_ETH.ipynb
 │ ├── EGARCH_ETH.ipynb
-│ ├── LSTM_ETH.ipynb
+│ ├── LSTM_ETH.ipynb # Lookback set at 0
+│ ├── LSTM_seq.ipynb # With temporal dependence tuning
 │ ├── XGBoost_ETH.ipynb
 │ └── Transformer/ # (Vanilla, Dense, Random Synthesizer)
 │
