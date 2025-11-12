@@ -148,14 +148,17 @@ DSE4101-CryptoWhale-2/
 ```
 ## Data Transformation Summary
 
+The following notebooks in `/Data Preprocessing/` handle all data extraction, cleaning, and feature creation required for model training.  
+Each file has a specific purpose and produces a reproducible intermediate dataset stored in `/Data/`.
+
 | Notebook | Input | Output | Description |
 |-----------|--------|---------|-------------|
-| whale_alerts_btc.ipynb | Whale Alert data| /Data/whale_btc_clean.csv | Cleans BTC whale transaction data |
-| whale_alerts_eth.ipynb | Whale Alert data| /Data/whale_eth_clean.csv | Cleans ETH whale transaction data |
-| dune_btc.ipynb | Dune BTC queries | /Data/dune_btc_hourly.csv | Fetches BTC on-chain metrics |
-| dune_eth.ipynb | Dune ETH queries | /Data/dune_eth_hourly.csv | Fetches ETH on-chain metrics |
-| final_df_var_fevd.ipynb | BTC & ETH volatility | /Data/final_df_var_fevd.csv | Creates VAR–FEVD spillover features |
-| feature_engineering.ipynb | All merged datasets | /Data/final_dataset.csv | Final modeling dataset |
+| **whale_alerts_btc.ipynb** | whale_alert_031124_131025.json | `/Data/whale_alerts_btc.csv` | Extracts and cleans Bitcoin whale transactions (exchange-to-wallet and wallet-to-exchange). Applies log transformations and timestamps alignment. |
+| **whale_alerts_eth.ipynb** | whale_alert_031124_131025.json | `/Data/whale_alerts_eth.csv` | Extracts and cleans Ethereum whale transactions. Filters only transfer events and performs log scaling for USD values. |
+| **dune_btc.ipynb** | raw Dune Analytics BTC data under /Data | `/Data/dune_btc_hourly.csv` | Merges hourly Dune raw BTC on-chain metrics (active addresses, fees, transaction counts, netflows). Applies log and power transformations to normalize skewness. |
+| **dune_eth.ipynb** | raw Dune Analytics ETH data under /Data| `/Data/dune_eth_hourly.csv` | Merges hourly Dune raw ETH network data (gas fees, priority fees, transaction counts, staking inflows, exchange activity). Performs log normalization and resampling to hourly intervals. |
+| **final_df_var_fevd.ipynb** | x_vol_future, `/Data/whale_alerts_x.csv`,`/Data/dune_x_hourly.csv` (x is btc or eth) | `/Data/btc_final_df.csv`, `/Data/eth_final_df.csv` | Constructs Vector Autoregression–based Forecast Error Variance Decomposition (VAR-FEVD) features capturing cross-asset volatility spillovers and merge whale and dune datasets to form final df. |
+
 
 ## Recommended Execution Order
 
