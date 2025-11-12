@@ -170,8 +170,8 @@ Run the notebooks in `/Data Preprocessing/` to extract, clean, and merge dataset
 Run notebooks in `/EDA/` to visualize distributions and correlations.
 
 **Files:**
-- `btc_eda.ipynb`
-- `eth_eda.ipynb`
+- `BTC_EDA.ipynb`
+- `ETH_EDA.ipynb`
 
 ---
 
