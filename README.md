@@ -65,11 +65,12 @@ Additional details:
 ---
 
 ## Repo Structure and description
+```
 DSE4101-CryptoWhale-2/
 ├── data/            # Raw and processed Whale + Dune data
 ├── notebooks/       # EDA and visualization
 ├── results/         # Metrics, plots, and backtest outputs
-
+```
 
 ## How to Replicate
 
