@@ -64,7 +64,7 @@ Additional details:
 
 ---
 
-## How to Replicate
+## Set Up
 
 ### macOS Setup
 
